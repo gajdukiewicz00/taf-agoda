@@ -3,7 +3,6 @@ package UI.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.lang.ref.WeakReference;
 
 
 public class HomePage extends BasePage {

@@ -9,12 +9,14 @@ public class LogPage extends BasePage{
     private WebElement buttonMenu;
     @FindBy(xpath = "//button[@class='Buttonstyled__ButtonStyled-sc-5gjk6l-0 bctLsm']")
     private WebElement buttonLogin;
-    @FindBy(xpath = "//input[@class='sc-AxmLO iksYDU sc-qZtCU bnePEP'][@id='email']")
+    @FindBy(xpath = "//input[@name='email']")
     private WebElement inputMail;
     @FindBy(xpath = "//input[@type='password']")
     private WebElement inputHas;
     @FindBy(xpath = "//button[@type ='submit']")
     private WebElement buttonSing;
+    @FindBy(xpath = "//*[@class='sc-fzqyvX kJWwZs kite-js-Typography ']")
+    private WebElement checkText;
 
     public LogPage() {
     }
@@ -48,4 +50,5 @@ public class LogPage extends BasePage{
         return this;
     }
 
+    public String getCheckText() {return checkText.getText();}
 }

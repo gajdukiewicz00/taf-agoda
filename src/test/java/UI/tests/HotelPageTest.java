@@ -13,12 +13,12 @@ public class HotelPageTest extends BaseTest{
         HotelPage hotelPage = new HotelPage();
         HomePage homePage = new HomePage();
         homePage.Search()
-                        .inputSearch()
-                                .clickOnCalendar()
-                                        .clickButtonSpan()
-                                                .dataOnCalendar()
-                                                        .dataOnCalendarOut()
-                                                                .clickOnButton();
+                .inputSearch()
+                .clickOnCalendar()
+                .clickButtonSpan()
+                .dataOnCalendar()
+                .dataOnCalendarOut()
+                .clickOnButton();
         Assert.assertEquals(city,hotelPage.getHotel());
     }
 }

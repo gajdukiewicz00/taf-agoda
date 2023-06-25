@@ -17,7 +17,7 @@ public class BasePage {
     public final static String LOCATION = "warsaw";
     public final String Email = "den.94dew@gmail.com";
     public final String Password = "test1234";
-    protected final int WAIT_TIMEOUT_SECONDS = 130;
+    protected final int WAIT_TIMEOUT_SECONDS = 10;
 
     protected BasePage() {
         driver = DriverSingleton.getDriver();
