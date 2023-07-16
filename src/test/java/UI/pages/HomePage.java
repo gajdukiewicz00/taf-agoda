@@ -24,10 +24,6 @@ public class HomePage extends BasePage {
     public HomePage() {
     }
 
-    public HomePage openPage() {
-        driver.get(BASE_URL);
-        return this;
-    }
 
     public HomePage Search() {
         waitForVisibilityOfElement(buttonSearch);

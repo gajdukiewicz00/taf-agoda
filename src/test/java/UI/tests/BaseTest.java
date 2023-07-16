@@ -1,6 +1,7 @@
 package UI.tests;
 
 import UI.driver.DriverSingleton;
+import UI.pages.BasePage;
 import UI.pages.HomePage;
 import UI.pages.LogPage;
 import org.junit.After;
@@ -14,8 +15,13 @@ public class BaseTest {
         homePage.openPage();
         LogPage logPage = new LogPage();
         logPage.openPage();
-    }
+        BasePage basePage = new BasePage();
+        basePage.openPage();
 
+    }
+    public void agodaBaseTest() {
+
+    }
 
     @After
     public void finishTest() {

@@ -13,8 +13,7 @@ public class LoginTest extends BaseTest {
         LogPage logPage = new LogPage();
         HomePage homePage = new HomePage();
         logPage.openPage();
-        logPage.clickButtonMenu();
-        logPage.clickButtonLog();
+
         try {
             Thread.sleep(200);
         } catch (InterruptedException e) {
