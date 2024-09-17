@@ -1,13 +1,12 @@
 package endpoints;
 
 import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.given;
 
 public class UserEndpoint {
     private static final String BASE_URL = config.Config.getBaseUrl();
 
-    public static Response getAllUsers() {
+    public static io.restassured.response.Response getAllUsers() {
         return given()
                 .when()
                 .get(BASE_URL + "/users")

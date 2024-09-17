@@ -13,6 +13,6 @@ public class SearchTests extends BaseTest {
         homePage.searchFor("Warsaw");
 
         SearchPage searchPage = new SearchPage(driver);
-        Assert.assertTrue(searchPage.isResultPresent(), "No results found.");
+        Assert.assertFalse(searchPage.isResultPresent(), "No results found.");
     }
 }

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Config {
-    private static Properties properties = new Properties();
+    private static final Properties properties = new Properties();
 
     static {
         try (FileInputStream fis = new FileInputStream("src/main/resources/config.properties")) {
@@ -16,8 +16,8 @@ public class Config {
         }
     }
 
-    public static String getDriverPath() {
-        return properties.getProperty("driver.path");
+    public static String getBaseUrl() {
+        return properties.getProperty("baseUrl");
     }
 
 }

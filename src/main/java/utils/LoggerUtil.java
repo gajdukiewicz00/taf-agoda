@@ -10,7 +10,4 @@ public class LoggerUtil {
         logger.info(message);
     }
 
-    public static void logError(String message, Throwable t) {
-        logger.error(message, t);
-    }
 }

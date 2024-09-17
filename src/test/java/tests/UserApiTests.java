@@ -7,12 +7,13 @@ import org.testng.annotations.Test;
 import utils.LoggerUtil;
 
 public class UserApiTests {
+    Response response;
 
     @Test
     public void testGetAllUsers() {
         LoggerUtil.logInfo("Starting test: Get All Users");
 
-        Response response = UserEndpoint.getAllUsers();
+        response = UserEndpoint.getAllUsers();
         Assert.assertEquals(response.getStatusCode(), 200, "Status code is not 200");
         Assert.assertTrue(response.jsonPath().getList("$").size() > 0, "User list is empty");
 
@@ -24,7 +25,7 @@ public class UserApiTests {
         LoggerUtil.logInfo("Starting test: Get User By ID");
 
         int userId = 1;
-        Response response = UserEndpoint.getUserById(userId);
+         response = UserEndpoint.getUserById(userId);
         Assert.assertEquals(response.getStatusCode(), 200, "Status code is not 200");
         Assert.assertEquals(response.jsonPath().getInt("id"), userId, "User ID does not match");
 
