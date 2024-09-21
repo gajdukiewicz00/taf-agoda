@@ -5,19 +5,22 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Config {
-    private static final Properties properties = new Properties();
+    private static Properties properties;
 
     static {
-        try (FileInputStream fis = new FileInputStream("src/main/resources/config.properties")) {
-            properties.load(fis);
+        try (FileInputStream input = new FileInputStream("src/main/resources/config.properties")) {
+            properties = new Properties();
+            properties.load(input);
         } catch (IOException e) {
             e.printStackTrace();
-            throw new RuntimeException("Failed to load configuration file.");
         }
     }
 
     public static String getBaseUrl() {
-        return properties.getProperty("baseUrl");
+        return properties.getProperty("baseAPI");
     }
 
+    public static String getDriverPath() {
+        return properties.getProperty("driverPath");
+    }
 }

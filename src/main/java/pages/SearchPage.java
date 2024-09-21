@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class SearchPage {
     private WebDriver driver;
-    private By results = By.cssSelector(".result-item");
+    private By results = By.cssSelector("#sort-bar-group-label");
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;

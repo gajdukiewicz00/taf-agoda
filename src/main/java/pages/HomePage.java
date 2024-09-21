@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage {
     private final WebDriver driver;
-    private final By searchBox = By.id("textInput");
-    private final By searchButton = By.xpath("//button[contains(@data-selenium, 'search')]");
+    private final By searchBox = By.xpath("//input[@id='textInput']");
+    private final By searchButton = By.xpath("//button[@radius='M']");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
