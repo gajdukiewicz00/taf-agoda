@@ -1,1 +1,11 @@
-UI\tests\HotelPageTest.class
+pages\BasePage.class
+api\ApiTestRunner.class
+utils\DriverFactory.class
+pages\HomePage.class
+tests\TestRunner.class
+steps\SearchSteps.class
+utils\ConfigReader.class
+pages\SearchResultsPage.class
+api\BaseApiTest.class
+steps\Hooks.class
+api\ApiSteps.class
